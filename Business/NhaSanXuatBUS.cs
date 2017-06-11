@@ -12,5 +12,18 @@ namespace Business
         {
             return _nsx.ViewNhaSanXuat();
         }
+
+        public void ThemNSX(NhaSanXuat nhaSanXuat)
+        {
+            _nsx.ThemNSX(nhaSanXuat);
+        }
+        public void SuaNSX(NhaSanXuat nhaSanXuat)
+        {
+            _nsx.SuaNSX(nhaSanXuat);
+        }
+        public void XoaNSX(decimal maNhaSanXuat)
+        {
+            _nsx.XoaNSX(maNhaSanXuat);
+        }
     }
 }

@@ -12,5 +12,20 @@ namespace Business
         {
             return _loaiHang.ViewLoaiHang();
         }
+
+        public void ThemLoaiHang(LoaiHangHoa loaiHangHoa)
+        {
+            _loaiHang.ThemloaiHangHoa(loaiHangHoa);
+        }
+        public void SuaLoaiHang(LoaiHangHoa loaiHangHoa)
+        {
+            _loaiHang.SualoaiHangHoa(loaiHangHoa);
+        }
+        public void XoaLoaiHang(decimal maloaiHangHoa)
+        {
+            _loaiHang.XoaLoaiHangHoa(maloaiHangHoa);
+        }
     }
+
+
 }

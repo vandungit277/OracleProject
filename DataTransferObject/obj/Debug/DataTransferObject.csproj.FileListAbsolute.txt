@@ -3,3 +3,8 @@ C:\Users\dangs\Desktop\SaleManager\DataTransferObject\bin\Debug\DataTransferObje
 C:\Users\dangs\Desktop\SaleManager\DataTransferObject\obj\Debug\DataTransferObject.csprojResolveAssemblyReference.cache
 C:\Users\dangs\Desktop\SaleManager\DataTransferObject\obj\Debug\DataTransferObject.dll
 C:\Users\dangs\Desktop\SaleManager\DataTransferObject\obj\Debug\DataTransferObject.pdb
+C:\Users\dangs\Documents\GitHub\OracleProject\DataTransferObject\bin\Debug\DataTransferObject.dll
+C:\Users\dangs\Documents\GitHub\OracleProject\DataTransferObject\bin\Debug\DataTransferObject.pdb
+C:\Users\dangs\Documents\GitHub\OracleProject\DataTransferObject\obj\Debug\DataTransferObject.dll
+C:\Users\dangs\Documents\GitHub\OracleProject\DataTransferObject\obj\Debug\DataTransferObject.pdb
+C:\Users\dangs\Documents\GitHub\OracleProject\DataTransferObject\obj\Debug\DataTransferObject.csprojResolveAssemblyReference.cache

@@ -68,17 +68,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hoa_Don\UCHoaDonNhap.cs">
+    <Compile Include="Khach_Hang\UCKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Hoa_Don\UCHoaDonNhap.Designer.cs">
-      <DependentUpon>UCHoaDonNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Hoa_Don\UCHoaDonXuat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Hoa_Don\UCHoaDonXuat.Designer.cs">
-      <DependentUpon>UCHoaDonXuat.cs</DependentUpon>
+    <Compile Include="Khach_Hang\UCKhachHang.Designer.cs">
+      <DependentUpon>UCKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Man_Hinh_Loading\ManHinhKhoiDong.cs">
       <SubType>Form</SubType>
@@ -91,6 +85,18 @@
     </Compile>
     <Compile Include="Man_Hinh_Loading\ManHinhLoading.Designer.cs">
       <DependentUpon>ManHinhLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhan_Vien\UCChucVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nhan_Vien\UCChucVu.Designer.cs">
+      <DependentUpon>UCChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhan_Vien\UCNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nhan_Vien\UCNhanVien.Designer.cs">
+      <DependentUpon>UCNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,26 +112,41 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="San_Pham\UCNhaPhanPhoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="San_Pham\UCNhaPhanPhoi.Designer.cs">
+      <DependentUpon>UCNhaPhanPhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="San_Pham\UCNhaSanXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="San_Pham\UCNhaSanXuat.Designer.cs">
+      <DependentUpon>UCNhaSanXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="San_Pham\UCSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="San_Pham\UCSanPham.Designer.cs">
       <DependentUpon>UCSanPham.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Hoa_Don\UCHoaDonNhap.resx">
-      <DependentUpon>UCHoaDonNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hoa_Don\UCHoaDonXuat.resx">
-      <DependentUpon>UCHoaDonXuat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khach_Hang\UCKhachHang.resx">
+      <DependentUpon>UCKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Man_Hinh_Loading\ManHinhKhoiDong.resx">
       <DependentUpon>ManHinhKhoiDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Man_Hinh_Loading\ManHinhLoading.resx">
       <DependentUpon>ManHinhLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhan_Vien\UCChucVu.resx">
+      <DependentUpon>UCChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhan_Vien\UCNhanVien.resx">
+      <DependentUpon>UCNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -140,6 +161,12 @@
     </Compile>
     <EmbeddedResource Include="San_Pham\UCLoaiSanPham.resx">
       <DependentUpon>UCLoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="San_Pham\UCNhaPhanPhoi.resx">
+      <DependentUpon>UCNhaPhanPhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="San_Pham\UCNhaSanXuat.resx">
+      <DependentUpon>UCNhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="San_Pham\UCSanPham.resx">
       <DependentUpon>UCSanPham.cs</DependentUpon>

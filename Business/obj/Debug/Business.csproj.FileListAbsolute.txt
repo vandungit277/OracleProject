@@ -3,3 +3,14 @@ C:\Users\dangs\Desktop\SaleManager\Business\bin\Debug\Business.pdb
 C:\Users\dangs\Desktop\SaleManager\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
 C:\Users\dangs\Desktop\SaleManager\Business\obj\Debug\Business.dll
 C:\Users\dangs\Desktop\SaleManager\Business\obj\Debug\Business.pdb
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\bin\Debug\Business.dll.config
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\bin\Debug\Business.dll
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\bin\Debug\Business.pdb
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\bin\Debug\DataAccess.dll
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\bin\Debug\DataTransferObject.dll
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\bin\Debug\EntityFramework.dll
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\bin\Debug\DataAccess.pdb
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\bin\Debug\DataTransferObject.pdb
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\obj\Debug\Business.dll
+C:\Users\dangs\Documents\GitHub\OracleProject\Business\obj\Debug\Business.pdb

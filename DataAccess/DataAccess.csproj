@@ -55,8 +55,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChucVuDAL.cs" />
     <Compile Include="KhachHangDAL.cs" />
     <Compile Include="LoaiHangHoaDAL.cs" />
+    <Compile Include="Model\CHUCVU.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CT_NHAPHANG.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CT_PHIEUXUAT.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HANGHOA.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KHACHHANG.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LOAIHANGHOA.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHANVIEN.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHAPHANPHOI.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHASANXUAT.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Oracle.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,21 +100,38 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Oracle.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\VIEW_HANG_HOA.cs">
+    <Compile Include="Model\PHIEUNHAP.cs">
       <DependentUpon>Oracle.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\VIEW_LOAI_HANG.cs">
+    <Compile Include="Model\PHIEUXUAT.cs">
       <DependentUpon>Oracle.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\VIEW_NHA_SAN_XUAT.cs">
+    <Compile Include="Model\TAIKHOAN.cs">
       <DependentUpon>Oracle.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\VIEW_SDT_KHACH_HANG.cs">
+    <Compile Include="Model\VIEWCHUCVU.cs">
       <DependentUpon>Oracle.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\VIEW_TEN_HANG_HOA.cs">
+    <Compile Include="Model\VIEWHANGHOA.cs">
       <DependentUpon>Oracle.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\VIEWKHACHHANG.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\VIEWLOAIHANG.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\VIEWNHANVIEN.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\VIEWNHAPHANPHOI.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\VIEWNHASANXUAT.cs">
+      <DependentUpon>Oracle.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienDAL.cs" />
+    <Compile Include="NhaPhanPhoiDAL.cs" />
     <Compile Include="NhaSanXuatDAL.cs" />
     <Compile Include="SanPhamDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

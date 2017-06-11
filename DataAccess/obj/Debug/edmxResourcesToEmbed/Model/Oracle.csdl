@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Oracle" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SUACHUCVU">
+      <Parameter Name="P_MACHUCVU" Mode="In" Type="Decimal" />
+      <Parameter Name="P_TENCHUCVU" Mode="In" Type="String" />
+      <Parameter Name="P_MOTA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SUAHANGHOA">
+      <Parameter Name="P_MAHANGHOA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_TENHANGHOA" Mode="In" Type="String" />
+      <Parameter Name="P_MOTA" Mode="In" Type="String" />
+      <Parameter Name="P_SOLUONGTON" Mode="In" Type="Decimal" />
+      <Parameter Name="P_GIANHAP" Mode="In" Type="Decimal" />
+      <Parameter Name="P_MANSX" Mode="In" Type="Decimal" />
+      <Parameter Name="P_MALOAIHANG" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="THEMCHUCVU">
+      <Parameter Name="P_TENCHUCVU" Mode="In" Type="String" />
+      <Parameter Name="P_MOTA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THEMHANGHOA">
+      <Parameter Name="P_TENHANGHOA" Mode="In" Type="String" />
+      <Parameter Name="P_MOTA" Mode="In" Type="String" />
+      <Parameter Name="P_SOLUONGTON" Mode="In" Type="Decimal" />
+      <Parameter Name="P_GIANHAP" Mode="In" Type="Decimal" />
+      <Parameter Name="P_MANSX" Mode="In" Type="Decimal" />
+      <Parameter Name="P_MALOAIHANG" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="XOACHUCVU">
+      <Parameter Name="P_MACHUCVU" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="XOAHANGHOA">
+      <Parameter Name="P_MAHANGHOA" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SUALOAIHANGHOA">
+      <Parameter Name="P_MALOAIHANG" Mode="In" Type="Decimal" />
+      <Parameter Name="P_TENLOAIHANG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THEMLOAIHANG">
+      <Parameter Name="P_TENLOAIHANG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XOALOAIHANG">
+      <Parameter Name="P_MALOAIHANG" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <EntitySet Name="CT_NHAPHANG" EntityType="Model.CT_NHAPHANG" />
+    <EntitySet Name="CT_PHIEUXUAT" EntityType="Model.CT_PHIEUXUAT" />
+    <EntitySet Name="CHUCVU" EntityType="Model.CHUCVU" />
+    <EntitySet Name="HANGHOA" EntityType="Model.HANGHOA" />
+    <EntitySet Name="KHACHHANG" EntityType="Model.KHACHHANG" />
+    <EntitySet Name="LOAIHANGHOA" EntityType="Model.LOAIHANGHOA" />
+    <EntitySet Name="NHANVIEN" EntityType="Model.NHANVIEN" />
+    <EntitySet Name="NHAPHANPHOI" EntityType="Model.NHAPHANPHOI" />
+    <EntitySet Name="NHASANXUAT" EntityType="Model.NHASANXUAT" />
+    <EntitySet Name="PHIEUNHAP" EntityType="Model.PHIEUNHAP" />
+    <EntitySet Name="PHIEUXUAT" EntityType="Model.PHIEUXUAT" />
+    <EntitySet Name="TAIKHOAN" EntityType="Model.TAIKHOAN" />
+    <AssociationSet Name="SYS_C0011190" Association="Model.SYS_C0011190">
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+      <End Role="CT_NHAPHANG" EntitySet="CT_NHAPHANG" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011191" Association="Model.SYS_C0011191">
+      <End Role="HANGHOA" EntitySet="HANGHOA" />
+      <End Role="CT_NHAPHANG" EntitySet="CT_NHAPHANG" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011183" Association="Model.SYS_C0011183">
+      <End Role="PHIEUXUAT" EntitySet="PHIEUXUAT" />
+      <End Role="CT_PHIEUXUAT" EntitySet="CT_PHIEUXUAT" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011184" Association="Model.SYS_C0011184">
+      <End Role="HANGHOA" EntitySet="HANGHOA" />
+      <End Role="CT_PHIEUXUAT" EntitySet="CT_PHIEUXUAT" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011147" Association="Model.SYS_C0011147">
+      <End Role="CHUCVU" EntitySet="CHUCVU" />
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="HANGHOA_FK1" Association="Model.HANGHOA_FK1">
+      <End Role="NHASANXUAT" EntitySet="NHASANXUAT" />
+      <End Role="HANGHOA" EntitySet="HANGHOA" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011155" Association="Model.SYS_C0011155">
+      <End Role="LOAIHANGHOA" EntitySet="LOAIHANGHOA" />
+      <End Role="HANGHOA" EntitySet="HANGHOA" />
+    </AssociationSet>
+    <AssociationSet Name="PHIEUXUAT_FK1" Association="Model.PHIEUXUAT_FK1">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="PHIEUXUAT" EntitySet="PHIEUXUAT" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011164" Association="Model.SYS_C0011164">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011170" Association="Model.SYS_C0011170">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="PHIEUXUAT" EntitySet="PHIEUXUAT" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011177" Association="Model.SYS_C0011177">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C0011178" Association="Model.SYS_C0011178">
+      <End Role="NHAPHANPHOI" EntitySet="NHAPHANPHOI" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+    </AssociationSet>
+    <EntitySet Name="VIEWCHUCVU" EntityType="Model.VIEWCHUCVU" />
+    <EntitySet Name="VIEWHANGHOA" EntityType="Model.VIEWHANGHOA" />
+    <EntitySet Name="VIEWLOAIHANG" EntityType="Model.VIEWLOAIHANG" />
+    <EntitySet Name="VIEWNHASANXUAT" EntityType="Model.VIEWNHASANXUAT" />
+    <EntitySet Name="VIEWKHACHHANG" EntityType="Model.VIEWKHACHHANG" />
+    <EntitySet Name="VIEWNHANVIEN" EntityType="Model.VIEWNHANVIEN" />
+    <FunctionImport Name="SUAKHACHHANG">
+      <Parameter Name="P_MAKHACHHANG" Mode="In" Type="Decimal" />
+      <Parameter Name="P_TENKHACHHANG" Mode="In" Type="String" />
+      <Parameter Name="P_SODIENTHOAI" Mode="In" Type="String" />
+      <Parameter Name="P_DIACHI" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SUANHANVIEN">
+      <Parameter Name="P_MANHANVIEN" Mode="In" Type="Decimal" />
+      <Parameter Name="P_TENNHANVIEN" Mode="In" Type="String" />
+      <Parameter Name="P_GIOITINH" Mode="In" Type="Decimal" />
+      <Parameter Name="P_NTNS" Mode="In" Type="DateTime" />
+      <Parameter Name="P_SODIENTHOAI" Mode="In" Type="String" />
+      <Parameter Name="P_CMND" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="P_DIACHI" Mode="In" Type="String" />
+      <Parameter Name="P_MACHUCVU" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SUANPP">
+      <Parameter Name="P_MANPP" Mode="In" Type="Decimal" />
+      <Parameter Name="P_TENNPP" Mode="In" Type="String" />
+      <Parameter Name="P_SODIENTHOAI" Mode="In" Type="String" />
+      <Parameter Name="P_DIACHI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SUANSX">
+      <Parameter Name="P_MANSX" Mode="In" Type="Decimal" />
+      <Parameter Name="P_TENNSX" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THEMKHACHHANG">
+      <Parameter Name="P_TENKHACHHANG" Mode="In" Type="String" />
+      <Parameter Name="P_SODIENTHOAI" Mode="In" Type="String" />
+      <Parameter Name="P_DIACHI" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THEMNHANVIEN">
+      <Parameter Name="P_TENNHANVIEN" Mode="In" Type="String" />
+      <Parameter Name="P_GIOITINH" Mode="In" Type="Decimal" />
+      <Parameter Name="P_NTNS" Mode="In" Type="DateTime" />
+      <Parameter Name="P_SODIENTHOAI" Mode="In" Type="String" />
+      <Parameter Name="P_CMND" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="P_DIACHI" Mode="In" Type="String" />
+      <Parameter Name="P_MACHUCVU" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="THEMNPP">
+      <Parameter Name="P_TENNPP" Mode="In" Type="String" />
+      <Parameter Name="P_SODIENTHOAI" Mode="In" Type="String" />
+      <Parameter Name="P_DIACHI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="THEMNSX">
+      <Parameter Name="P_TENNSX" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="XOAKHACHHANG">
+      <Parameter Name="P_MAKHACHHANG" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="XOANHANVIEN">
+      <Parameter Name="P_MANHANVIEN" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="XOANPP">
+      <Parameter Name="P_MANPP" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="XOANSX">
+      <Parameter Name="P_MANSX" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <EntitySet Name="VIEWNHAPHANPHOI" EntityType="Model.VIEWNHAPHANPHOI" />
+  </EntityContainer>
+  <EntityType Name="CT_NHAPHANG">
+    <Key>
+      <PropertyRef Name="MAPN" />
+      <PropertyRef Name="MAHANGHOA" />
+    </Key>
+    <Property Name="MAPN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MAHANGHOA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="SOLUONG" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TONGTIEN" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="PHIEUNHAP" Relationship="Model.SYS_C0011190" FromRole="CT_NHAPHANG" ToRole="PHIEUNHAP" />
+    <NavigationProperty Name="HANGHOA" Relationship="Model.SYS_C0011191" FromRole="CT_NHAPHANG" ToRole="HANGHOA" />
+  </EntityType>
+  <EntityType Name="CT_PHIEUXUAT">
+    <Key>
+      <PropertyRef Name="MAPX" />
+      <PropertyRef Name="MAHANGHOA" />
+    </Key>
+    <Property Name="MAPX" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MAHANGHOA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="SOLUONG" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TONGTIEN" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="PHIEUXUAT" Relationship="Model.SYS_C0011183" FromRole="CT_PHIEUXUAT" ToRole="PHIEUXUAT" />
+    <NavigationProperty Name="HANGHOA" Relationship="Model.SYS_C0011184" FromRole="CT_PHIEUXUAT" ToRole="HANGHOA" />
+  </EntityType>
+  <EntityType Name="CHUCVU">
+    <Key>
+      <PropertyRef Name="MACHUCVU" />
+    </Key>
+    <Property Name="MACHUCVU" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENCHUCVU" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MOTA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Model.SYS_C0011147" FromRole="CHUCVU" ToRole="NHANVIEN" />
+  </EntityType>
+  <EntityType Name="HANGHOA">
+    <Key>
+      <PropertyRef Name="MAHANGHOA" />
+    </Key>
+    <Property Name="MAHANGHOA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENHANGHOA" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GIANHAP" Type="Int64" Nullable="false" />
+    <Property Name="SOLUONGTON" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MOTA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MANSX" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MALOAIHANG" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="CT_NHAPHANG" Relationship="Model.SYS_C0011191" FromRole="HANGHOA" ToRole="CT_NHAPHANG" />
+    <NavigationProperty Name="CT_PHIEUXUAT" Relationship="Model.SYS_C0011184" FromRole="HANGHOA" ToRole="CT_PHIEUXUAT" />
+    <NavigationProperty Name="NHASANXUAT" Relationship="Model.HANGHOA_FK1" FromRole="HANGHOA" ToRole="NHASANXUAT" />
+    <NavigationProperty Name="LOAIHANGHOA" Relationship="Model.SYS_C0011155" FromRole="HANGHOA" ToRole="LOAIHANGHOA" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MAKHACHHANG" />
+    </Key>
+    <Property Name="MAKHACHHANG" Type="Int32" Nullable="false" />
+    <Property Name="TENKHACHHANG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SODIENTHOAI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PHIEUXUAT" Relationship="Model.PHIEUXUAT_FK1" FromRole="KHACHHANG" ToRole="PHIEUXUAT" />
+  </EntityType>
+  <EntityType Name="LOAIHANGHOA">
+    <Key>
+      <PropertyRef Name="MALOAIHANG" />
+    </Key>
+    <Property Name="MALOAIHANG" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENLOAIHANG" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HANGHOA" Relationship="Model.SYS_C0011155" FromRole="LOAIHANGHOA" ToRole="HANGHOA" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANHANVIEN" />
+    </Key>
+    <Property Name="MANHANVIEN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENNHANVIEN" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="GIOITINH" Type="Int16" />
+    <Property Name="NTNS" Type="DateTime" />
+    <Property Name="SODIENTHOAI" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CMND" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MACHUCVU" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="CHUCVU" Relationship="Model.SYS_C0011147" FromRole="NHANVIEN" ToRole="CHUCVU" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="Model.SYS_C0011164" FromRole="NHANVIEN" ToRole="TAIKHOAN" />
+    <NavigationProperty Name="PHIEUXUAT" Relationship="Model.SYS_C0011170" FromRole="NHANVIEN" ToRole="PHIEUXUAT" />
+    <NavigationProperty Name="PHIEUNHAP" Relationship="Model.SYS_C0011177" FromRole="NHANVIEN" ToRole="PHIEUNHAP" />
+  </EntityType>
+  <EntityType Name="NHAPHANPHOI">
+    <Key>
+      <PropertyRef Name="MANPP" />
+    </Key>
+    <Property Name="MANPP" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENNPP" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SODIENTHOAI" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PHIEUNHAP" Relationship="Model.SYS_C0011178" FromRole="NHAPHANPHOI" ToRole="PHIEUNHAP" />
+  </EntityType>
+  <EntityType Name="NHASANXUAT">
+    <Key>
+      <PropertyRef Name="MANSX" />
+    </Key>
+    <Property Name="MANSX" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENNSX" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HANGHOA" Relationship="Model.HANGHOA_FK1" FromRole="NHASANXUAT" ToRole="HANGHOA" />
+  </EntityType>
+  <EntityType Name="PHIEUNHAP">
+    <Key>
+      <PropertyRef Name="MAPN" />
+    </Key>
+    <Property Name="MAPN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NGAYNHAP" Type="DateTime" Nullable="false" />
+    <Property Name="MANHANVIEN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MANPP" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TINHTRANG" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="CT_NHAPHANG" Relationship="Model.SYS_C0011190" FromRole="PHIEUNHAP" ToRole="CT_NHAPHANG" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Model.SYS_C0011177" FromRole="PHIEUNHAP" ToRole="NHANVIEN" />
+    <NavigationProperty Name="NHAPHANPHOI" Relationship="Model.SYS_C0011178" FromRole="PHIEUNHAP" ToRole="NHAPHANPHOI" />
+  </EntityType>
+  <EntityType Name="PHIEUXUAT">
+    <Key>
+      <PropertyRef Name="MAPX" />
+    </Key>
+    <Property Name="MAPX" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NGAYXUATPHIEU" Type="DateTime" Nullable="false" />
+    <Property Name="MANHANVIEN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TINHTRANG" Type="Int16" Nullable="false" />
+    <Property Name="MAKHACHHANG" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CT_PHIEUXUAT" Relationship="Model.SYS_C0011183" FromRole="PHIEUXUAT" ToRole="CT_PHIEUXUAT" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Model.PHIEUXUAT_FK1" FromRole="PHIEUXUAT" ToRole="KHACHHANG" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Model.SYS_C0011170" FromRole="PHIEUXUAT" ToRole="NHANVIEN" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="TAIKHOAN1" />
+    </Key>
+    <Property Name="TAIKHOAN1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MATKHAU" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="MANHANVIEN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MAHOA" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Model.SYS_C0011164" FromRole="TAIKHOAN" ToRole="NHANVIEN" />
+  </EntityType>
+  <Association Name="SYS_C0011190">
+    <End Type="Model.PHIEUNHAP" Role="PHIEUNHAP" Multiplicity="1" />
+    <End Type="Model.CT_NHAPHANG" Role="CT_NHAPHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUNHAP">
+        <PropertyRef Name="MAPN" />
+      </Principal>
+      <Dependent Role="CT_NHAPHANG">
+        <PropertyRef Name="MAPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011191">
+    <End Type="Model.HANGHOA" Role="HANGHOA" Multiplicity="1" />
+    <End Type="Model.CT_NHAPHANG" Role="CT_NHAPHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HANGHOA">
+        <PropertyRef Name="MAHANGHOA" />
+      </Principal>
+      <Dependent Role="CT_NHAPHANG">
+        <PropertyRef Name="MAHANGHOA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011183">
+    <End Type="Model.PHIEUXUAT" Role="PHIEUXUAT" Multiplicity="1" />
+    <End Type="Model.CT_PHIEUXUAT" Role="CT_PHIEUXUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUXUAT">
+        <PropertyRef Name="MAPX" />
+      </Principal>
+      <Dependent Role="CT_PHIEUXUAT">
+        <PropertyRef Name="MAPX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011184">
+    <End Type="Model.HANGHOA" Role="HANGHOA" Multiplicity="1" />
+    <End Type="Model.CT_PHIEUXUAT" Role="CT_PHIEUXUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HANGHOA">
+        <PropertyRef Name="MAHANGHOA" />
+      </Principal>
+      <Dependent Role="CT_PHIEUXUAT">
+        <PropertyRef Name="MAHANGHOA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011147">
+    <End Type="Model.CHUCVU" Role="CHUCVU" Multiplicity="1" />
+    <End Type="Model.NHANVIEN" Role="NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHUCVU">
+        <PropertyRef Name="MACHUCVU" />
+      </Principal>
+      <Dependent Role="NHANVIEN">
+        <PropertyRef Name="MACHUCVU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HANGHOA_FK1">
+    <End Type="Model.NHASANXUAT" Role="NHASANXUAT" Multiplicity="1" />
+    <End Type="Model.HANGHOA" Role="HANGHOA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHASANXUAT">
+        <PropertyRef Name="MANSX" />
+      </Principal>
+      <Dependent Role="HANGHOA">
+        <PropertyRef Name="MANSX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011155">
+    <End Type="Model.LOAIHANGHOA" Role="LOAIHANGHOA" Multiplicity="1" />
+    <End Type="Model.HANGHOA" Role="HANGHOA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIHANGHOA">
+        <PropertyRef Name="MALOAIHANG" />
+      </Principal>
+      <Dependent Role="HANGHOA">
+        <PropertyRef Name="MALOAIHANG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PHIEUXUAT_FK1">
+    <End Type="Model.KHACHHANG" Role="KHACHHANG" Multiplicity="1" />
+    <End Type="Model.PHIEUXUAT" Role="PHIEUXUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKHACHHANG" />
+      </Principal>
+      <Dependent Role="PHIEUXUAT">
+        <PropertyRef Name="MAKHACHHANG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011164">
+    <End Type="Model.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+    <End Type="Model.TAIKHOAN" Role="TAIKHOAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANHANVIEN" />
+      </Principal>
+      <Dependent Role="TAIKHOAN">
+        <PropertyRef Name="MANHANVIEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011170">
+    <End Type="Model.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+    <End Type="Model.PHIEUXUAT" Role="PHIEUXUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANHANVIEN" />
+      </Principal>
+      <Dependent Role="PHIEUXUAT">
+        <PropertyRef Name="MANHANVIEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011177">
+    <End Type="Model.NHANVIEN" Role="NHANVIEN" Multiplicity="1" />
+    <End Type="Model.PHIEUNHAP" Role="PHIEUNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANHANVIEN" />
+      </Principal>
+      <Dependent Role="PHIEUNHAP">
+        <PropertyRef Name="MANHANVIEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C0011178">
+    <End Type="Model.NHAPHANPHOI" Role="NHAPHANPHOI" Multiplicity="1" />
+    <End Type="Model.PHIEUNHAP" Role="PHIEUNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHAPHANPHOI">
+        <PropertyRef Name="MANPP" />
+      </Principal>
+      <Dependent Role="PHIEUNHAP">
+        <PropertyRef Name="MANPP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="VIEWCHUCVU">
+    <Key>
+      <PropertyRef Name="MACHUCVU" />
+      <PropertyRef Name="TENCHUCVU" />
+    </Key>
+    <Property Name="MACHUCVU" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENCHUCVU" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MOTA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIEWHANGHOA">
+    <Key>
+      <PropertyRef Name="MAHANGHOA" />
+      <PropertyRef Name="TENHANGHOA" />
+      <PropertyRef Name="SOLUONGTON" />
+      <PropertyRef Name="GIANHAP" />
+      <PropertyRef Name="TENNSX" />
+    </Key>
+    <Property Name="MAHANGHOA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENHANGHOA" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MOTA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SOLUONGTON" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="GIANHAP" Type="Int64" Nullable="false" />
+    <Property Name="TENLOAIHANG" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TENNSX" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIEWLOAIHANG">
+    <Key>
+      <PropertyRef Name="MALOAIHANG" />
+    </Key>
+    <Property Name="MALOAIHANG" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENLOAIHANG" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIEWNHASANXUAT">
+    <Key>
+      <PropertyRef Name="MANSX" />
+      <PropertyRef Name="TENNSX" />
+    </Key>
+    <Property Name="MANSX" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENNSX" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIEWKHACHHANG">
+    <Key>
+      <PropertyRef Name="MAKHACHHANG" />
+      <PropertyRef Name="TENKHACHHANG" />
+    </Key>
+    <Property Name="MAKHACHHANG" Type="Int32" Nullable="false" />
+    <Property Name="TENKHACHHANG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SODIENTHOAI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VIEWNHANVIEN">
+    <Key>
+      <PropertyRef Name="MANHANVIEN" />
+      <PropertyRef Name="TENNHANVIEN" />
+      <PropertyRef Name="SODIENTHOAI" />
+      <PropertyRef Name="CMND" />
+      <PropertyRef Name="TENCHUCVU" />
+    </Key>
+    <Property Name="MANHANVIEN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENNHANVIEN" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="GIOITINH" Type="Int16" />
+    <Property Name="NTNS" Type="DateTime" />
+    <Property Name="SODIENTHOAI" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CMND" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TENCHUCVU" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIEWNHAPHANPHOI">
+    <Key>
+      <PropertyRef Name="MANPP" />
+      <PropertyRef Name="TENNPP" />
+      <PropertyRef Name="SODIENTHOAI" />
+    </Key>
+    <Property Name="MANPP" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TENNPP" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SODIENTHOAI" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

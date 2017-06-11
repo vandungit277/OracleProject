@@ -2,7 +2,8 @@
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using SaleManager.San_Pham;
-using SaleManager.Hoa_Don;
+using SaleManager.Nhan_Vien;
+using SaleManager.Khach_Hang;
 using AddTab;
 using DevExpress.XtraTab.ViewInfo;
 using DevExpress.XtraTab;
@@ -75,16 +76,38 @@ namespace SaleManager
             SplashScreenManager.ShowForm(typeof(ManHinhLoading));
             AddTab("Loại Sản Phẩm", new UCLoaiSanPham());
         }
-        private void btnHoaDonXuat_ItemClick(object sender, ItemClickEventArgs e)
+       
+
+        private void btnchucvu_ItemClick(object sender, ItemClickEventArgs e)
         {
             SplashScreenManager.ShowForm(typeof(ManHinhLoading));
-            AddTab("Phiếu Xuất", new UCHoaDonXuat());
+            AddTab("Chức Vụ", new UCChucVu());
+        }
+       
+
+        private void btnnhanvien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SplashScreenManager.ShowForm(typeof(ManHinhLoading));
+            AddTab("Nhân Viên", new UCNhanVien());
+        }
+      
+        private void btnNsx_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SplashScreenManager.ShowForm(typeof(ManHinhLoading));
+            AddTab("Nhà Sản Xuất", new UCNhaSanXuat());
         }
 
-        private void btnHoaDonNhap_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnnpp_ItemClick(object sender, ItemClickEventArgs e)
         {
             SplashScreenManager.ShowForm(typeof(ManHinhLoading));
-            AddTab("Phiếu Nhập", new UCHoaDonNhap());
+            AddTab("Nhà Phân Phối", new UCNhaPhanPhoi());
+        }
+       
+        private void btnkhachhang_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            SplashScreenManager.ShowForm(typeof(ManHinhLoading));
+            AddTab("Khách Hàng", new UCKhachHang());
         }
         #endregion
     }
